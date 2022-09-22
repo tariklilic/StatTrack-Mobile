@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#484c54">
+
+    <TextView
+        android:id="@+id/summonerNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="summonerName"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/profileIconId"
+        app:layout_constraintStart_toEndOf="@+id/profileIconId"
+        app:layout_constraintTop_toTopOf="@+id/profileIconId"
+        app:layout_constraintVertical_bias="0.66" />
+
+    <TextView
+        android:id="@+id/serverText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:hint="server"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/summonerNameText"
+        app:layout_constraintStart_toEndOf="@+id/summonerNameText"
+        app:layout_constraintTop_toTopOf="@+id/summonerNameText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/deleteFavoritePlayerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="#714444"
+        android:backgroundTint="#DC3545"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/poppins_regular"
+        android:onClick="deleteFavoritePlayer"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="@+id/serverText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/serverText"
+        app:layout_constraintTop_toTopOf="@+id/serverText" />
+
+    <ImageView
+        android:id="@+id/profileIconId"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+</androidx.constraintlayout.widget.ConstraintLayout>
